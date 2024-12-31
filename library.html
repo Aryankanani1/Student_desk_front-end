@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="library-style.css">
+    <title>Library - Student's Desk</title>
+</head>
+<body>
+
+    <div class="library-container">
+        <h1>Student Library</h1>
+        <!-- Department Selection Dropdown -->
+        <label for="department-select">Select Department:</label>
+        <select id="department-select">
+            <option value="it">Information Technology (IT)</option>
+            <option value="civil">Civil Engineering</option>
+            <option value="computer">Computer Engineering</option>
+            <option value="Electric">Electric Engineering</option>
+            <!-- Add more departments as needed -->
+        </select>
+
+        <!-- Semester Selection Dropdown -->
+        <label for="semester-select">Select Semester:</label>
+        <select id="semester-select">
+            <option value="sem1">Semester 1</option>
+            <option value="sem2">Semester 2</option>
+            <option value="sem3">Semester 3</option>
+            <option value="sem4">Semester 4</option>
+            <option value="sem5">Semester 5</option>
+            <option value="sem6">Semester 6</option>
+            <option value="sem7">Semester 7</option>
+            <option value="sem8">Semester 8</option>
+        </select>
+
+        <!-- Subject List -->
+        <div id="subject-list">
+            <!-- Subject details will be dynamically populated here -->
+        </div>
+     <div class="hod-section">
+            <h2>Heads of Departments</h2>
+            <div class="hod" id="itHod">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="IT HOD Photo">
+                <p>IT Department</p>
+            </div>
+            <div class="hod" id="civilHod">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Civil HOD Photo">
+                <p>Civil Department</p>
+            </div>
+            <div class="hod" id="ComputerHod">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Computer HOD Photo">
+                <p>Computer Department</p>
+            </div>
+            <div class="hod" id="ElectricHod">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Electric HOD Photo">
+                <p>Electric Department</p>
+            </div>
+            <!-- Add similar sections for other departments -->
+        </div>
+
+        <!-- Book Section -->
+<div class="book-section">
+    <h2>Books</h2>
+    <!-- Department Selection Dropdown -->
+    <label for="department-select">Select Department:</label>
+    <select id="department-select-books">
+        <option value="it">Information Technology (IT)</option>
+        <option value="civil">Civil Engineering</option>
+        <option value="computer">Computer Engineering</option>
+        <option value="electric">Electric Engineering</option>
+        <!-- Add more departments as needed -->
+    </select>
+
+    <!-- Semester Selection Dropdown -->
+    <label for="semester-select">Select Semester:</label>
+    <select id="semester-select-books">
+        <option value="sem1">Semester 1</option>
+        <option value="sem2">Semester 2</option>
+        <option value="sem3">Semester 3</option>
+        <option value="sem4">Semester 4</option>
+        <option value="sem5">Semester 5</option>
+        <option value="sem6">Semester 6</option>
+        <option value="sem7">Semester 7</option>
+        <option value="sem8">Semester 8</option>
+        <!-- Add more semesters as needed -->
+    </select>
+
+    <!-- Book List -->
+    <div id="book-list">
+        <!-- Books will be dynamically populated here -->
+    </div>
+</div>
+</div> 
+        <button onclick="goToMainPage()">Back to Main Page</button>
+    </div>
+
+    <script src="library-script.js"></script>
+</body>
+</html>

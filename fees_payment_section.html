@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fees_payment.css">
+    <title>Fees Payment - Student's Desk</title>
+</head>
+<body>
+    <div class="fees-container">
+        <h1>Fees Payment</h1>
+        <form id="fees-form">
+            <label for="enrollment-number">Enrollment Number:</label>
+            <input type="text" id="enrollment-number" name="enrollmentNumber" required>
+
+            <label for="branch">Branch:</label>
+            <select id="branch" name="branch" required>
+                <option value="it">Information Technology (IT)</option>
+                <option value="civil">Civil Engineering</option>
+                <option value="computer">Computer Engineering</option>
+                <!-- Add more branches as needed -->
+            </select>
+
+            <label for="semester">Semester:</label>
+            <select id="semester" name="semester" required>
+                <option value="sem1">Semester 1</option>
+                <option value="sem2">Semester 2</option>
+                <!-- Add more semesters as needed -->
+            </select>
+
+            <label for="fees-amount">Total Fees Amount:</label>
+            <input type="number" id="fees-amount" name="feesAmount" required>
+
+            <label for="payment-category">Payment Category:</label>
+            <select id="payment-category" name="paymentCategory" onchange="showPaymentFields()" required>
+                <option value="net-banking">Net Banking</option>
+                <option value="debit-card">Debit Card</option>
+                <!-- Add more payment categories as needed -->
+            </select>
+
+            <!-- Additional fields based on payment category -->
+            <div id="net-banking-fields" style="display: none;">
+                <label for="api-id">API ID:</label>
+                <input type="text" id="api-id" name="apiId">
+            </div>
+
+            <div id="debit-card-fields" style="display: none;">
+                <label for="debit-card-number">Debit Card Number:</label>
+                <input type="text" id="debit-card-number" name="debitCardNumber">
+            </div>
+
+            <label for="transaction-charge">Transaction Charge:</label>
+            <input type="number" id="transaction-charge" name="transactionCharge" required>
+
+            <label for="total-amount">Total Amount:</label>
+            <input type="number" id="total-amount" name="totalAmount" readonly>
+
+            <button type="button" id="calculate-total" onclick="calculateTotal()">Calculate Total</button>
+            <button type="submit" onclick="downloadReceipt()">Submit Payment</button>
+        </form>
+
+        <!-- Back to Main Page Button -->
+        <button id="back-to-main" onclick="goToMainPage()">Back to Main Page</button>
+    </div>
+
+
+    <script src="fees_payment.js"></script>
+</body>
+</html>

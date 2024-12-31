@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="subject-details-style.css">
+    <title>Subject Details - Student's Desk</title>
+</head>
+<body>
+
+    <div class="subject-details-container">
+        <h1>Subject Details</h1>
+        <p>Subject Name: <span id="subject-name"></span></p>
+        <p>Subject Code: <span id="subject-code"></span></p>
+
+        <div class="subject-details-content">
+            <div class="sir-info">
+                <img src="#" alt="Sir Photo" id="sirPhoto">
+                <p>Sir Name: <span id="sirName"></span></p>
+                <p>Phone Number: <span id="sirPhoneNumber"></span></p>
+            </div>
+            <!-- Display subject ciriculam -->
+            
+            <div class="subject-credits" id="subjectCredits"></div>
+            <div class="subject-ciriculam" id="subjectCiriculam"></div>
+            <div class="subject-chapters" id="subjectChapters"></div>
+            
+            
+            <!-- Display video link -->
+            <div class="video-link" id="videoLink"></div>
+        </div>
+
+        <button onclick="goBack()">Back to Subject List</button>
+    </div>
+
+    <script src="subject-details-script.js"></script>
+</body>
+</html>

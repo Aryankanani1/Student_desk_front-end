@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="student-portal.css">
+    <title>Student Portal - Communication</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Communication Section</h1>
+
+        <!-- Select user or section to communicate with -->
+        <label for="recipientSelect">Select Recipient:</label>
+        <select id="recipientSelect" onchange="selectRecipient()">
+            <option value="admin">Admin</option>
+            <option value="faculty">Faculty</option>
+            <option value="hod">HOD</option>
+            <option value="sports">College Sports</option>
+            <option value="culture">Culture Section</option>
+            <!-- Add more recipients as needed -->
+        </select>
+
+        <!-- Add a new communication tool -->
+        <label for="toolSelect">Select Communication Tool:</label>
+        <select id="toolSelect" onchange="selectTool()">
+            <option value="messaging">Messaging</option>
+            <option value="notifications">Notifications</option>
+            <!-- Add more tools as needed -->
+        </select>
+
+        <!-- Display messages -->
+        <div id="messageContainer">
+            <div id="messages"></div>
+            <textarea id="newMessage" placeholder="Type your message..."></textarea>
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+        <!-- Display notifications -->
+        <div id="notificationContainer">
+            <div id="notifications"></div>
+        </div>
+
+        <!-- Back Button -->
+        <button onclick="goToMainPage()">Back to Main Page</button>
+    </div>
+    
+
+    <script src="student-portal.js"></script>
+</body>
+</html>

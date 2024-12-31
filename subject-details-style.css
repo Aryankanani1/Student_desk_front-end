@@ -1,0 +1,130 @@
+/* subject-details-style.css */
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    background-color: #3498db;
+}
+
+.subject-details-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out; /* Apply fade-in animation */
+}
+
+.subject-details-container h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #007bff; /* Cool blue color */
+}
+
+.subject-details-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.subject-details-content > div {
+    flex-basis: calc(50% - 20px);
+    margin-bottom: 20px;
+}
+
+.subject-details-content > div:last-child {
+    flex-basis: 100%;
+}
+
+.subject-details-content img {
+    width: 50%; /* Adjust photo width */
+    max-width: 50%; /* Ensure photos do not exceed their original size */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow to images */
+    transition: transform 0.3s ease; /* Add smooth hover effect */
+}
+
+.subject-details-content img:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.subject-details-content p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subject-details-content .sir-info {
+    text-align: center;
+}
+
+.subject-details-content .sir-info p {
+    margin-bottom: 10px; /* Add space between sir name and sir phone number */
+}
+
+.subject-details-content .subject-details-side {
+    flex-basis: 100%;
+}
+
+.subject-details-content .subject-ciriculam,
+.subject-details-content .subject-credits,
+.subject-details-content .subject-code {
+    border-top: 2px solid #007bff; /* Blue border */
+    padding-top: 20px;
+}
+
+.subject-details-content .subject-chapters {
+    border-top: 2px solid #007bff; /* Blue border */
+    padding-top: 20px;
+}
+
+.subject-details-content .subject-chapters p {
+    margin-bottom: 10px;
+}
+
+.subject-details-content .video-link {
+    text-align: center;
+    margin-top: 20px; /* Add margin to separate from previous content */
+}
+
+.subject-details-content .video-link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d71e31; /* Blue background */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.subject-details-content .video-link a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.subject-details-container button {
+    background-color: #007bff; /* Blue background */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Add margin to separate from previous content */
+}
+
+.subject-details-container button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* ... (remaining styles) ... */

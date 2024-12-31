@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calendar.css">
+    <title>Interactive Academic Calendar</title>
+</head>
+<body>
+
+<div class="calendar-container">
+    <h1>Academic Calendar</h1>
+    <div class="tabs">
+        <button class="tab" onclick="showEvents('exams')">Exams</button>
+        <button class="tab" onclick="showEvents('fees')">Fees Payment</button>
+        <button class="tab" onclick="showEvents('culture')">Culture Activities</button>
+        <button class="tab" onclick="showEvents('celebrations')">Celebrations</button>
+        <button class="tab" onclick="showEvents('upcoming')">Upcoming Events</button>
+        <button class="tab" onclick="showEvents('special')">Special Event</button>
+    </div>
+    <div class="events" id="exams">
+        <!-- Exam events will be displayed here -->
+    </div>
+    <div class="events" id="fees">
+        <!-- Fees payment events will be displayed here -->
+    </div>
+    <div class="events" id="culture">
+        <!-- Culture activity events will be displayed here -->
+    </div>
+    <div class="events" id="celebrations">
+        <!-- Celebration events will be displayed here -->
+    </div>
+    <div class="events" id="upcoming">
+        <!-- Upcoming events will be displayed here -->
+    </div>
+    <div class="events" id="special">
+        <!-- Special events will be displayed here -->
+    </div>
+    
+    <!-- Add a container for the full-year calendar -->
+    <div class="year-calendar-container">
+        <!-- Full-year calendar will be dynamically generated here -->
+    </div>
+
+    <div class="year-dropdown">
+        <label for="yearSelect">Select Year:</label>
+        <select id="yearSelect" onchange="generateCalendarForSelectedYear()">
+            <!-- You can add more options here if needed -->
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+
+        </select>
+    </div>
+
+<!-- Event Modal -->
+<div id="eventModal" class="modal">
+    <span class="close" onclick="closeEventModal()">&times;</span>
+    <img id="eventImage" class="modal-content" alt="Event Image">
+    <div id="eventDescription" class="event-description"></div>
+</div>
+</div>
+
+<button class="back-to-main" onclick="goToMainPage()">Back to Main Page</button>
+
+<script src="calendar.js"></script>
+</body>
+</html>

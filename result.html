@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="result-style.css">
+    <title>Student Result - Student's Desk</title>
+</head>
+<body>
+
+    <div class="result-container">
+        <h1>Student Result</h1>
+
+        <div class="result-details">
+            <table class="student-info">
+                <tr>
+                    <td class="label">Name:</td>
+                    <td>John Doe</td>
+                    <td rowspan="3" class="photo"><img src="https://sugermint.com/wp-content/uploads/2020/08/munnabhai-mbbs.jpg" alt="Student Photo"></td>
+                </tr>
+                <tr>
+                    <td class="label">Roll No:</td>
+                    <td>123456</td>
+                </tr>
+                <tr>
+                    <td class="label">Total Marks:</td>
+                    <td>450</td>
+                </tr>
+                <tr>
+                    <td class="label">Subject:</td>
+                    <td colspan="2">Physics, Chemistry, Math</td>
+                </tr>
+                <tr>
+                    <td class="label">Highest Marks:</td>
+                    <td colspan="2">90%</td>
+                </tr>
+                <tr>
+                    <td class="label">Grade:</td>
+                    <td colspan="2">A</td>
+                </tr>
+                <tr>
+                    <td class="label">Rank:</td>
+                    <td colspan="2">1st</td>
+                </tr>
+            </table>
+
+            <div class="marks-info">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Marks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Physics</td>
+                            <td id="physicsMarks">90</td> <!-- Set the actual marks dynamically -->
+                        </tr>
+                        <tr>
+                            <td>Chemistry</td>
+                            <td id="chemistryMarks">85</td> <!-- Set the actual marks dynamically -->
+                        </tr>
+                        <tr>
+                            <td>Math</td>
+                            <td id="mathMarks">92</td> <!-- Set the actual marks dynamically -->
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p><strong>Total Marks:</strong> <span id="totalMarks">267</span></p> <!-- Set the actual total marks dynamically -->
+            </div>
+
+            <div class="pass-fail-message">
+                <p><strong>Result:</strong> Pass</p>
+                <p>Congratulations! You have successfully passed the exam.</p>
+            </div>
+
+            <button onclick="downloadMarksheet()">Download Marksheet</button>
+        </div>
+
+        <button onclick="goBack()">Back to Main Page</button>
+    </div>
+
+    <script src="result.js"></script>
+</body>
+</html>
